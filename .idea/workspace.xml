@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="71333519-77f3-4e95-a898-ebfc11defc75" name="Default Changelist" comment="" />
+    <list default="true" id="71333519-77f3-4e95-a898-ebfc11defc75" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/hsqldb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tinkoffTranlate/log.lck" beforeDir="false" afterPath="$PROJECT_DIR$/tinkoffTranlate/log.lck" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tinkoffTranlate/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/tinkoffTranlate/log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tinkoffTranlate/log.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tinkoffTranlate/log.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tinkoffTranlate/log.script" beforeDir="false" afterPath="$PROJECT_DIR$/tinkoffTranlate/log.script" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/translate.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,11 +46,16 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hsqldb.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.40689656" />
@@ -49,17 +80,65 @@
       <option name="presentableId" value="Default" />
       <updated>1595959326321</updated>
       <workItem from="1595959331710" duration="208000" />
+      <workItem from="1595959685249" duration="196000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="258" y="65" width="1040" height="826" key="SettingsEditor" timestamp="1595959456511">
+    <state x="484" y="219" key="FileChooserDialogImpl" timestamp="1595959824894">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="258" y="65" width="1040" height="826" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1595959456511" />
+    <state x="484" y="219" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1595959824894" />
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom" timestamp="1595959880535">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1595959880535" />
+    <state width="1877" height="295" key="GridCell.Tab.0.center" timestamp="1595959880535">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1595959880535" />
+    <state width="1877" height="295" key="GridCell.Tab.0.left" timestamp="1595959880535">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1595959880535" />
+    <state width="1877" height="295" key="GridCell.Tab.0.right" timestamp="1595959880535">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1595959880535" />
+    <state width="1877" height="295" key="GridCell.Tab.1.bottom" timestamp="1595959880535">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1595959880535" />
+    <state width="1877" height="295" key="GridCell.Tab.1.center" timestamp="1595959880535">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1595959880535" />
+    <state width="1877" height="295" key="GridCell.Tab.1.left" timestamp="1595959880535">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1595959880535" />
+    <state width="1877" height="295" key="GridCell.Tab.1.right" timestamp="1595959880535">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="295" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1595959880535" />
+    <state x="258" y="65" width="1040" height="826" key="SettingsEditor" timestamp="1595959828083">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="258" y="65" width="1040" height="826" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1595959828083" />
     <state x="511" y="649" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1595959445012">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
