@@ -1,5 +1,7 @@
 package ru.tinkoff.translate.translate;
 
+import org.json.JSONException;
+
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -9,28 +11,23 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @see TranslatorYandex
  */
-class TranslatorYandexTest
-{
-   /**
-    * Тестирование запроса на перевод
-    */
-   @org.junit.jupiter.api.Test
-   void call()
-   {
-      String langFrom = "en";
-      String langTo = "ru";
-      String text = "Test";
-      String expected = "Тест";
+class TranslatorYandexTest {
+    /**
+     * Тестирование запроса на перевод
+     */
+    @org.junit.jupiter.api.Test
+    void call() {
+        String langFrom = "en";
+        String langTo = "ru";
+        String text = "Test";
+        String expected = "Тест";
 
-      TranslatorYandex translatorYandex = new TranslatorYandex( text, langFrom, langTo );
+        TranslatorYandex translatorYandex = new TranslatorYandex(text, langFrom, langTo);
 
-      try
-      {
-         assertEquals( translatorYandex.call(), expected );
-      }
-      catch ( IOException exception )
-      {
-         fail( "TEST ERROR! Exception during translatorYandex.call()!" );
-      }
-   }
+        try {
+            assertEquals(expected, translatorYandex.call());
+        } catch (JSONException | IOException exception) {
+            fail("TEST ERROR! Exception during translatorYandex.call()!");
+        }
+    }
 }
