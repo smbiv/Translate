@@ -1,5 +1,7 @@
 package ru.tinkoff.translate.translate;
 
+import org.springframework.stereotype.Repository;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +9,8 @@ import java.util.List;
 /**
  * Класс {@code LogBase} обеспечивает взаимодействие приложения с базой данных данных пользовательских запросов
  */
-public class LogBase {
+@Repository
+public class LogBase implements LogInterface {
     /**
      * Путь к базе данных
      */
@@ -44,7 +47,7 @@ public class LogBase {
      *    <li>Закрытие соединения с БД</li>
      * </ul>
      */
-    public LogBase() {
+    public void initTable() {
         try (Connection connection = DriverManager.getConnection(connectionString, login, password);
              Statement statement = connection.createStatement();
              ResultSet tables = connection.getMetaData().getTables(null, null, "LOGTABLE", null)) {
@@ -88,7 +91,6 @@ public class LogBase {
 
     /**
      * Получение всех записей {@code LogElement} из БД в виде {@code ArrayList<LogElement>}
-     * Процесс получения состоит из следующих этапов:
      *
      * @return Список всех пользовательских запросов сохраненных в БД в виде {@code ArrayList<LogElement>}
      * @see LogElement

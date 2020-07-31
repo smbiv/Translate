@@ -1,5 +1,7 @@
 package ru.tinkoff.translate.translate;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -15,6 +17,7 @@ import java.util.function.Consumer;
  *
  * @see TranslatorYandex
  */
+@Component
 public class Translator {
     /**
      * Результат перевода

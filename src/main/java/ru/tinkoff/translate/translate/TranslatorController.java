@@ -3,6 +3,7 @@ package ru.tinkoff.translate.translate;
 import java.sql.Timestamp;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,12 +18,27 @@ public class TranslatorController {
     /**
      * База данных с логом перевода
      */
-    final LogBase logBase = new LogBase();
+    private LogInterface logBase;
 
     /**
      * Компонент переводчика
      */
-    final Translator translator = new Translator();
+    private Translator translator;
+
+    /**
+     * Конструктор контроллера сервиса переводов
+     *
+     * @param logBase Логер применяемый для фиксирования, хранения и обработки пользовательских запросов
+     * @param translator Класс обработки REST-запросов
+     */
+    @Autowired
+    TranslatorController(LogInterface logBase,
+                         Translator translator) {
+        this.logBase = logBase;
+        this.translator = translator;
+
+        this.logBase.initTable();
+    }
 
     /**
      * Запрос на перевод текста
