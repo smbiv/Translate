@@ -20,11 +20,6 @@ import java.util.function.Consumer;
 @Component
 public class Translator {
     /**
-     * Результат перевода
-     */
-    private String output = "";
-
-    /**
      * Массив буквенных обозначений языков по стандарту ISO 631-1
      */
     private static final String[] ISO_LANG_CODES = java.util.Locale.getISOLanguages();
@@ -52,17 +47,17 @@ public class Translator {
      * @param langTo   Кодовое обозначение целевого языка
      * @see TranslatorYandex
      */
-    public void translate(String text, String langFrom, String langTo) {
-        this.output = "";
+    public TranslatorOutput translate(String text, String langFrom, String langTo) {
+        String output = "";
 
         if (isLangCodeIncorrect(langFrom)) {
-            this.output = "ERROR! Incorrect input language code!";
-            return;
+            output = "ERROR! Incorrect input language code!";
+            return new TranslatorOutput(output);
         }
 
         if (isLangCodeIncorrect(langTo)) {
-            this.output = "ERROR! Incorrect target language code!";
-            return;
+            output = "ERROR! Incorrect target language code!";
+            return new TranslatorOutput(output);
         }
 
         try {
@@ -80,19 +75,12 @@ public class Translator {
                 translation.append(" ");
             }
 
-            this.output = translation.toString().trim();
+            output = translation.toString().trim();
         } catch (InterruptedException | ExecutionException exception) {
-            this.output = exception.getMessage();
+            output = exception.getMessage();
         }
-    }
 
-    /**
-     * Получение результата перевода
-     *
-     * @return Результат перевода (переведенный текст или сообщение об ошибке)
-     */
-    public String getOutput() {
-        return output;
+        return new TranslatorOutput(output);
     }
 
     /**

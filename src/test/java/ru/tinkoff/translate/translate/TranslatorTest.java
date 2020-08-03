@@ -23,8 +23,9 @@ class TranslatorTest {
         String text = "Test";
         String expected = "Тест";
 
-        translator.translate(text, langFrom, langTo);
-        assertEquals(expected, translator.getOutput());
+        TranslatorOutput output = translator.translate(text, langFrom, langTo);
+
+        assertEquals(expected, output.getOutput());
     }
 
     /**
@@ -37,8 +38,9 @@ class TranslatorTest {
         String text = "Test sentence. And one more.";
         String expected = "Тест приговор. И один больше.";
 
-        translator.translate(text, langFrom, langTo);
-        assertEquals(expected, translator.getOutput());
+        TranslatorOutput output = translator.translate(text, langFrom, langTo);
+
+        assertEquals(expected, output.getOutput());
     }
 
     /**
@@ -51,8 +53,9 @@ class TranslatorTest {
         String text = "Test";
         String expected = "ERROR! Incorrect target language code!";
 
-        translator.translate(text, langFrom, langTo);
-        assertEquals(expected, translator.getOutput());
+        TranslatorOutput output = translator.translate(text, langFrom, langTo);
+
+        assertEquals(expected, output.getOutput());
     }
 
     /**
@@ -65,8 +68,9 @@ class TranslatorTest {
         String text = "Test";
         String expected = "ERROR! Incorrect input language code!";
 
-        translator.translate(text, langFrom, langTo);
-        assertEquals(expected, translator.getOutput());
+        TranslatorOutput output = translator.translate(text, langFrom, langTo);
+
+        assertEquals(expected, output.getOutput());
     }
 
     @BeforeEach

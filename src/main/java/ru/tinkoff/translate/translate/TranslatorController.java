@@ -47,11 +47,12 @@ public class TranslatorController {
      * @param langFrom Кодовое обозначение исходного языка
      * @param langTo   Кодовое обозначение целевого языка
      * @param request  Пользовательский HTTP-запрос
-     * @return Компонент {@code Translator} с результатами перевода
+     * @return Компонент {@code TranslatorOutput} с результатами перевода в формате {@code TranslatorOutput}
      * @see Translator
+     * @see TranslatorOutput
      */
     @GetMapping("/translate")
-    public Translator translate(@RequestParam(value = "text") String text,
+    public TranslatorOutput translate(@RequestParam(value = "text") String text,
                                 @RequestParam(value = "from") String langFrom,
                                 @RequestParam(value = "to") String langTo,
                                 HttpServletRequest request) {
@@ -59,9 +60,8 @@ public class TranslatorController {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 
         logBase.writeLogElement(new LogElement(timestamp.toString(), ip, text, langFrom, langTo));
-        translator.translate(text, langFrom, langTo);
 
-        return translator;
+        return translator.translate(text, langFrom, langTo);
     }
 
     /**
