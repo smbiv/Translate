@@ -5,6 +5,8 @@ import org.springframework.stereotype.Repository;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Класс {@code LogBase} обеспечивает взаимодействие приложения с базой данных данных пользовательских запросов
@@ -37,6 +39,11 @@ public class LogBase implements LogInterface {
     private static final String password = "admin";
 
     /**
+     * Логгер записи ошибок работы с БД
+     */
+    Logger logger = Logger.getLogger(LogBase.class.getName());
+
+    /**
      * Инициализация класса работы с базой
      * Процесс инициализации состоит из следующих этапов:
      * <ul>
@@ -59,7 +66,7 @@ public class LogBase implements LogInterface {
             String sql = "CREATE TABLE LOGTABLE (id IDENTITY, time VARCHAR(23), ip VARCHAR(39), text VARCHAR(128), fromLang VARCHAR(3), toLang VARCHAR(3))";
             statement.executeUpdate(sql);
         } catch (SQLException exception) {
-            System.out.println("ERROR! Cannot initialize database!");
+            logger.log(Level.WARNING, "ERROR! Cannot initialize database!");
             exception.printStackTrace();
         }
     }
@@ -84,7 +91,7 @@ public class LogBase implements LogInterface {
 
             preparedStatement.executeUpdate();
         } catch (SQLException exception) {
-            System.out.println("ERROR! Cannot write log element to database!");
+            logger.log(Level.WARNING, "ERROR! Cannot write log element to database!");
             exception.printStackTrace();
         }
     }
@@ -114,7 +121,7 @@ public class LogBase implements LogInterface {
 
             resultSet.close();
         } catch (SQLException exception) {
-            System.out.println("ERROR! Cannot get log from database!");
+            logger.log(Level.WARNING, "ERROR! Cannot get log from database!");
             exception.printStackTrace();
             log.add(new LogElement(-1, "", "", "ERROR! Cannot get log from database!", "", ""));
 

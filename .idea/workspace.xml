@@ -22,9 +22,6 @@
     <list default="true" id="71333519-77f3-4e95-a898-ebfc11defc75" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/tinkoff/translate/translate/LogBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/tinkoff/translate/translate/LogBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/tinkoff/translate/translate/TranslateApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/tinkoff/translate/translate/TranslateApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/tinkoff/translate/translate/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/tinkoff/translate/translate/Translator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/tinkoff/translate/translate/TranslatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/tinkoff/translate/translate/TranslatorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tinkoffTranlate/log.lck" beforeDir="false" afterPath="$PROJECT_DIR$/tinkoffTranlate/log.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tinkoffTranlate/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/tinkoffTranlate/log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tinkoffTranlate/log.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tinkoffTranlate/log.properties" afterDir="false" />
@@ -113,6 +110,7 @@
       <workItem from="1595960421998" duration="2217000" />
       <workItem from="1596128081678" duration="9657000" />
       <workItem from="1596203409662" duration="9365000" />
+      <workItem from="1596460153367" duration="3681000" />
     </task>
     <servers />
   </component>
